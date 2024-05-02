@@ -1,0 +1,536 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.my_app {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-self: stretch;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+/* Styles for logo */
+.logo {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .logo {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.logoText {
+  margin-left: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 29px;
+  font-weight: 600;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .logoText {
+    font-size: 24px;
+  }
+}
+
+/* Styles for search bar */
+.searchBar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+}
+@media (max-width: 767px) {
+  .searchBar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+}
+
+/* Styles for Dashboard */
+.dashboard_container, .authentication_container, .error_Container, .loading_Container {
+  background-color: #1f2128;
+  background-image: url("./assets/Header_bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .dashboard_container, .authentication_container {
+    background-size: auto 554px;
+    height: auto;
+  }
+}
+
+.dashboard_card_container {
+  max-width: 1200px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 767px) {
+  .dashboard_card_container {
+    max-width: 1200px;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Styles for footer */
+.footer_container {
+  min-height: 7rem;
+  background-color: #30333d;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .footer_container {
+    min-height: 5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+.footer_styles {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* Styles for weather card */
+.weather_card_container {
+  flex: 0 1 65%;
+  max-width: 579px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  justify-content: center;
+}
+
+.gridStyles {
+  padding-bottom: 2;
+  padding-right: 2;
+  margin-top: 2;
+  margin-left: "auto";
+  margin-right: "auto";
+}
+
+.card_top {
+  flex: 0 1 60%;
+  background-image: url("./assets/Cloud_bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 10px 10px 0px 0px;
+}
+@media (max-width: 767px) {
+  .card_top {
+    flex: 0 1 100%;
+    background-size: 100% auto;
+    padding: 1rem 0;
+  }
+}
+
+.city {
+  font-size: 29px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .city {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .city {
+    font-size: 1.2rem;
+  }
+}
+
+.time {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .time {
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  .time {
+    font-size: 0.8rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.weather {
+  font-size: 19px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .weather {
+    font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.imageStatus {
+  margin-right: 1rem;
+}
+@media (max-width: 768px) {
+  .imageStatus {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .imageStatus {
+    margin-right: 0.3rem;
+  }
+}
+
+.temp {
+  font-size: 64px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .temp {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .temp {
+    font-size: 2rem;
+  }
+}
+
+.tempValue {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .tempValue {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .tempValue {
+    font-size: 0.8rem;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .title {
+    font-size: 0.8rem;
+  }
+}
+
+.value {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .value {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .value {
+    font-size: 0.8rem;
+  }
+}
+
+.card_top--left {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_top--right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_bottom {
+  flex: 1;
+  background-color: #383b47;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.group {
+  display: flex;
+  margin: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.card_bottom--left {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card_bottom--center {
+  flex: 0 1 35%;
+  border-right: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_bottom--right {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*SearchBar components styles*/
+.search-bar {
+  display: flex;
+  flex-direction: row;
+}
+.searchInput {
+  background-color: #1f2128;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  border-radius: 8px;
+}
+.searchButton {
+  background-color: #6c5dd3;
+  margin-left: -1rem;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  box-shadow: none;
+}
+.textfieldclass {
+  background-color: #1f2128;
+  border-radius: 8px;
+  width: 150px;
+  padding: 0.5rem;
+}
+.addcity {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+}
+
+/*View Weather page styles*/
+.city_weather_card_container {
+  flex: 0 1 65%;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  width: 1201px;
+}
+@media (max-width: 768px) {
+  .city_weather_card_container {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+.view_weather_logo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .view_weather_logo {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .view_weather_logo {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+}
+.view_weather_container {
+  background-color: #1f2128;
+  background-image: url("./assets/Header_bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.city_card_top {
+  flex: 0 1 66%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px 10px 0px 0px;
+}
+.View_card_container {
+  max-width: 1201px;
+  max-height: 597px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.high_top {
+  padding: 1rem;
+  justify-content: left;
+  align-items: left;
+}
+.middle_top {
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.low_top {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.lower_row_first {
+  flex: 0 1 50%;
+  width: 50%;
+  border-right: 2px solid #ffffff;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.lower_row_second {
+  flex: 0 1 50%;
+  width: 50%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.hidddenButton {
+  background-color: transparent;
+  border-radius: 8px;
+  border-color: transparent;
+  justify-content: left;
+  align-items: left;
+  margin-right: 100%;
+}
+.notification {
+  color: #fff;
+  padding-top: 1rem;
+}
+.logOutContainer {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.logOutButton, .logInButton {
+  background-color: #6c5dd3;
+  margin-left: -1rem;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  box-shadow: none;
+}
+.wellcome_styles, .error_styles {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+.logInContainer {
+  margin-top: 1rem;
+}

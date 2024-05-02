@@ -1,0 +1,36 @@
+{
+  "List": [
+    {
+      "CityCode": "1248991",
+      "ExpirationTime": 3000
+    },
+    {
+      "CityCode": "1850147",
+      "ExpirationTime": 5000
+    },
+    {
+      "CityCode": "2644210",
+      "ExpirationTime": 7000
+    },
+    {
+      "CityCode": "2988507",
+      "ExpirationTime": 8000000
+    },
+    {
+      "CityCode": "2147714",
+      "ExpirationTime": 1000000
+    },
+    {
+      "CityCode": "4930956",
+      "ExpirationTime": 2000000
+    },
+    {
+      "CityCode": "1796236",
+      "ExpirationTime": 3100000
+    },
+    {
+      "CityCode": "3143244",
+      "ExpirationTime": 4200000
+    }
+  ]
+}
